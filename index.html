@@ -3,10 +3,42 @@
     <head>
         <meta charset="UTF-8">
         <title>Exos javascript</title>
+
+
     </head>
     <body>
 
-    <!--Votre code ici-->
+    <audio src="./Schub.mp3" id="schub"></audio>
+    <audio src="./Talk.mp3" id="talk"></audio>
+
+    <form>
+        <label for="nom">Quel est ton nom ?</label>
+        <input type="text" id="nom" value=""/>
+        <label for="age">Quel est ton âge ?</label>
+        <input type="text" id ="age" value=""/>
+        <input type="button" value="Ok" onclick="musique();"/>
+   </form>
+
+<p id="Test"></p>
+
+   <script>
+
+   function musique()
+   {
+     var Age = document.getElementById('age').value;
+     var Name = document.getElementById('nom').value;
+     var bonjour = ("Bonjour " + Name + "!");
+     document.getElementById("Test").innerHTML = bonjour;
+ if (age < 18)
+ {
+player = document.getElementById("schub");
+   }
+ else {
+player = document.getElementById("talk");
+ }
+ player.play();
+ }
+   </script>
 
     </body>
 </html>
